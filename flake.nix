@@ -12,8 +12,6 @@
         treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
       in
       {
-        lispBuilder = import ./default.nix { };
-
         formatter = treefmtEval.config.build.wrapper;
 
         checks = {
